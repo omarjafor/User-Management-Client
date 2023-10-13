@@ -26,6 +26,9 @@ const Home = () => {
         .then(res => res.json())
         .then( data => {
             console.log(data)
+            if(data.insertedId){
+                alert('User added successful');
+            }
             const newUsers = [...users, data]
             setUsers(newUsers);
             e.target.reset();
