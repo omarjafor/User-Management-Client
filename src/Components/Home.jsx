@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-    
+    const [users, setUsers] = useState([]);
 
     useEffect( () => {
         fetch('http://localhost:5000/user')
