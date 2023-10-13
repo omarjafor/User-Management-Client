@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -37,6 +38,7 @@ const Home = () => {
 
     return (
         <div>
+            <Link to='/user'>User</Link>
             <h1 className="text-3xl font-bold">User Management Client</h1>
             <h1 className="text-xl font-bold">User Length : {users.length} </h1>
             <form onSubmit={handleAddUser}>
