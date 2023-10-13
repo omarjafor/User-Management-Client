@@ -31,8 +31,7 @@ const Home = () => {
                 alert('User added successful');
             }
             const newUsers = [...users, data]
-            setUsers(newUsers);
-            e.target.reset();
+            
         })
     }
 
