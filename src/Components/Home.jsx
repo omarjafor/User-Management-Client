@@ -42,9 +42,9 @@ const Home = () => {
             <h1 className="text-3xl font-bold">User Management Client</h1>
             <h1 className="text-xl font-bold">User Length : {users.length} </h1>
             <form onSubmit={handleAddUser}>
-                <input type="text" name="name" id="" className="border mt-2 border-solid border-black" />
+                <input type="text" name="name" defaultValue="" className="border mt-2 border-solid border-black" />
                 <br />
-                <input type="email" name="email" id="" className="border border-solid my-2 border-black" />
+                <input type="email" name="email" defaultValue="" className="border border-solid my-2 border-black" />
                 <br />
                 <input type="submit" value="Submit" className="border border-solid p-2 mb-2 rounded-lg border-black" />
             </form>
