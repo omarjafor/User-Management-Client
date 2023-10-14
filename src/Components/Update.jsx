@@ -9,8 +9,17 @@ const Update = () => {
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
-        const user = { name, email}
-        console.log(user);
+        const updatedUser = { name, email}
+
+        fetch(`http://localhost:5000/users/${loadedUser._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(updatedUser)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
     }
 
     return (
