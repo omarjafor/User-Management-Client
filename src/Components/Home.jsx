@@ -6,7 +6,7 @@ const Home = () => {
     const [users, setUsers] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/user')
+        fetch('http://localhost:5000/users')
         .then( res => res.json())
         .then( data => setUsers(data))
     } , [])
@@ -49,7 +49,7 @@ const Home = () => {
                 <input type="submit" value="Submit" className="border border-solid p-2 mb-2 rounded-lg border-black" />
             </form>
             {
-                users.map( user => <li key={user.id}> {user.id} : {user.name} : {user.email} </li>)
+                users.map( user => <li key={user._id}> {user._id} : {user.name} : {user.email} </li>)
             }
         </div>
     );
